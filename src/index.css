@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Subtle paper horizontal ruled lines & light grid pattern */
+    background-color: #F5F3ED;
+    background-image: 
+      linear-gradient(to right, rgba(23, 21, 19, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(23, 21, 19, 0.025) 1px, transparent 1px);
+    background-size: 32px 32px;
+    color: #171513;
+  }
+}
+
+/* Custom Paper & Scrapbook Decorative Elements */
+.paper-texture {
+  position: relative;
+}
+.paper-texture::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(23, 21, 19, 0.04) 1px, transparent 0);
+  background-size: 16px 16px;
+  opacity: 0.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F3ED;
+}
+::-webkit-scrollbar-thumb {
+  background: #171513;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F4C542;
+}
+
+/* Notebook Tape Effect */
+.scrapbook-tape {
+  position: relative;
+}
+.scrapbook-tape::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1.5deg);
+  width: 100px;
+  height: 22px;
+  background: rgba(244, 197, 66, 0.45);
+  backdrop-filter: blur(1px);
+  border: 1px dashed rgba(23, 21, 19, 0.2);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Editorial Sticker Tag */
+.editorial-sticker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.725rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1.5px solid #171513;
+  box-shadow: 2px 2px 0px #171513;
+  background: #FAF8F3;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.editorial-sticker:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #171513;
+}
+
+/* Tactile Button Styling */
+.btn-tactile-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #F4C542;
+  color: #171513;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 2px solid #171513;
+  box-shadow: 4px 4px 0px #171513;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+.btn-tactile-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #171513;
+  background-color: #f7d268;
+}
+.btn-tactile-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #171513;
+}
+
+.btn-tactile-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #FAF8F3;
+  color: #171513;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border: 2px solid #171513;
+  box-shadow: 4px 4px 0px #171513;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+.btn-tactile-secondary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #171513;
+  background-color: #FFFFFF;
+}
+.btn-tactile-secondary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #171513;
+}
+
+/* Hand-drawn style annotations */
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom line clamps & marquee tweaks */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
