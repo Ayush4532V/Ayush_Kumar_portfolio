@@ -61,7 +61,7 @@ export const PORTFOLIO_DATA = {
     heroLabels: [
       "AI / ML",
       "PRODUCT BUILDER",
-      "FOUNDER @ REVIEWLOOP",
+      "FOUNDER @ CLUDU",
       "FARIDABAD, INDIA"
     ],
     marquee: [
@@ -81,9 +81,9 @@ export const PORTFOLIO_DATA = {
 
   projects: [
     {
-      id: "reviewloop",
+      id: "cludu",
       tag: "01 — STARTUP",
-      title: "ReviewLoop",
+      title: "Cludu",
       subtitle: "WhatsApp-based review-funnel SaaS product built for Indian small service businesses.",
       description: "Full-stack WhatsApp review funnel designed to streamline customer feedback, manage multi-tenant database rules, and run conversational workflows.",
       badge: "2 PAYING CLIENTS",
@@ -96,7 +96,7 @@ export const PORTFOLIO_DATA = {
       ],
       annotations: ["built from scratch", "real users → real feedback"],
       linkText: "VIEW PROJECT",
-      linkUrl: "#reviewloop",
+      linkUrl: "https://cludu.in",
       theme: "hero-dark"
     },
     {
@@ -117,7 +117,7 @@ export const PORTFOLIO_DATA = {
       ],
       annotations: ["zero data leaks", "100% browser-side"],
       linkText: "EXPLORE PRIVACY TOOL",
-      linkUrl: "#safe-hai",
+      linkUrl: "https://safehaiindia.vercel.app",
       theme: "light-security"
     },
     {
@@ -152,7 +152,7 @@ export const PORTFOLIO_DATA = {
     {
       period: "2026 — PRESENT",
       role: "Founder & Developer",
-      company: "ReviewLoop",
+      company: "Cludu",
       description: "WhatsApp-based review-funnel SaaS product for Indian small service businesses.",
       points: [
         "Architected multi-tenant PostgreSQL/Supabase database schema with strict RLS policies.",

@@ -34,7 +34,7 @@ export const SelectedWork: React.FC = () => {
         <div className="space-y-20">
           
           {/* ========================================================
-              PROJECT 1: REVIEWLOOP (HERO PROJECT)
+              PROJECT 1: CLUDU (HERO PROJECT)
              ======================================================== */}
           {(() => {
             const p1 = projects[0];
@@ -103,6 +103,8 @@ export const SelectedWork: React.FC = () => {
                     <div>
                       <a
                         href={p1.linkUrl}
+                        target={p1.linkUrl.startsWith('http') ? "_blank" : undefined}
+                        rel={p1.linkUrl.startsWith('http') ? "noopener noreferrer" : undefined}
                         className="btn-tactile-primary inline-flex"
                       >
                         {p1.linkText} <ArrowUpRight className="w-4 h-4" />
@@ -128,7 +130,7 @@ export const SelectedWork: React.FC = () => {
                           <div className="w-3 h-3 rounded-full bg-brand-pink border border-ink" />
                           <div className="w-3 h-3 rounded-full bg-brand-yellow border border-ink" />
                           <div className="w-3 h-3 rounded-full bg-brand-green border border-ink" />
-                          <span className="font-mono text-[10px] text-ink-muted ml-2">ReviewLoop SaaS Admin // Multi-Tenant RLS</span>
+                          <span className="font-mono text-[10px] text-ink-muted ml-2">Cludu SaaS Admin // Multi-Tenant RLS</span>
                         </div>
                         <span className="font-mono text-[10px] bg-brand-green text-ink px-2 py-0.5 border border-ink font-bold">LIVE</span>
                       </div>
@@ -272,7 +274,12 @@ export const SelectedWork: React.FC = () => {
                       ))}
                     </div>
 
-                    <a href={p2.linkUrl} className="btn-tactile-secondary">
+                    <a
+                      href={p2.linkUrl}
+                      target={p2.linkUrl.startsWith('http') ? "_blank" : undefined}
+                      rel={p2.linkUrl.startsWith('http') ? "noopener noreferrer" : undefined}
+                      className="btn-tactile-secondary"
+                    >
                       {p2.linkText} <ArrowUpRight className="w-4 h-4" />
                     </a>
                   </div>

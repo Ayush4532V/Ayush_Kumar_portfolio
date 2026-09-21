@@ -159,7 +159,7 @@ export const Hero: React.FC = () => {
             <div className="mt-6 flex flex-col items-center">
               <span className="editorial-sticker bg-paper text-ink border-ink font-mono text-xs">
                 <span className="w-2 h-2 rounded-full bg-brand-green animate-ping" />
-                FOUNDER @ REVIEWLOOP
+                FOUNDER @ CLUDU
               </span>
               <span className="font-mono text-[10px] text-ink-light mt-1.5">
                 FARIDABAD, HARYANA, INDIA
